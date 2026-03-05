@@ -1,1 +1,3 @@
 # TODO
+
+ On Linux App Service, Python apps don’t auto‑start Uvicorn for FastAPI—you must provide a Startup Command (or a startup script). Microsoft’s guidance explicitly says to set a custom startup command for frameworks that aren’t auto-detected (e.g., FastAPI) or when your entry point isn’t the default Flask names. You can put the command directly in the Startup Command field or reference a script checked into your repo. [dev.to]
