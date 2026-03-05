@@ -4,13 +4,13 @@ import uvicorn
 app = FastAPI()
 
 
-@app.post("/ask")
+@app.get("/ask")
 async def ask_api(request: Request):
     response = {
         "headers": request.headers,
         "query_params ": request.query_params
     }
-    return response
+    return {"response": "Hello to you!"}
 
 
 if __name__ == '__main__':
