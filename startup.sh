@@ -1,1 +1,1 @@
-python -m uvicorn application:app --host 0.0.0.0
+gunicorn -k uvicorn.workers.UvicornWorker main:app --bind 0.0.0.0:$PORT
